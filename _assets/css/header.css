@@ -1,0 +1,51 @@
+/**
+* HEADER CSS
+*/
+
+.base
+{
+	font-family: 'Arvo', serif;
+	font-weight: normal;
+	color: #333333;
+	padding: 0px 60px 0px 60px;
+	margin-top: 0;
+}
+
+.header
+{
+	text-transform: uppercase;
+}
+
+.header.top-nav ul
+{
+	margin-top: 0;
+	padding: 0px;
+}
+
+.header.top-nav ul li
+{
+	font-size: 9px;
+	text-align: top;
+	vertical-align: middle;
+	display: inline;
+} 
+
+.header.title
+{
+	font-weight: bold;
+	font-size: 36px;
+	text-align: center;
+	margin: 0;
+}
+
+.header.date
+{
+	font-size: 14px;
+	text-align: center;
+	margin: 0;
+}
+
+.header.categories
+{
+	font-size: 14px;
+}
