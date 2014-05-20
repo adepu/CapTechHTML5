@@ -1,3 +1,49 @@
 /**
-* Aritcle CSS
+* Article CSS
 */
+
+.header
+{
+	text-align: center;
+	font-family: 'Arvo';
+}
+
+#banner.header
+{
+	font-size: 18px;
+	font-weight: bold;
+	font-style: italic;
+	color: #333333;
+	background-color:#D3D3D3;
+	height: 50px;
+	padding: 5px;
+}
+
+.header.top-nav ul li
+{
+	font-size: 9pt;
+	color: #333333;
+	text-transform: uppercase;
+	display: inline;
+	padding-right: 20px;
+}
+
+.header.top-nav ul li.active
+{
+	font-weight: bold;
+}
+
+.pull-right
+{
+	font-size: 9pt;
+	color: #F8F8F8;
+	font-style: normal;
+	float: right;
+}
+
+.pull-right.arrow
+{
+	font-size: 18px;
+	color: #F8F8F8;
+	padding-top: 5px;
+}
