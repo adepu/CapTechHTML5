@@ -1,3 +1,54 @@
 /** 
 * HOME PAGE CSS
 */
+
+
+.head {
+
+	font: bold italic 18px Arvo;
+
+}
+
+#left {
+
+	font: 12px Arvo;
+}
+
+#heading1{
+
+	font: italic 16px/20px Arvo;
+}
+
+.heading2{
+	font: bold italic 16px/20px Arvo;
+}
+.snippet{
+	font: 10px/15px Arvo;
+}
+#title{
+	font: italic 16px Arvo;
+	text-align: center;
+}
+.title1{
+	font: italic 12px/15px Arvo;
+}
+#travelhead{
+	font: bold 12px Arvo;
+}
+#thead{
+	font: bold 12px/15px Arvo;
+}
+#banner{
+	background-color: #cccccc;
+}
+#bannerTop{
+	font: 12px Arvo;
+	color:#ffffff;
+	text-align: right;
+}
+#bannerMid{
+	font: bold italic 18px Arvo;
+	text-align: center;
+
+}
+
