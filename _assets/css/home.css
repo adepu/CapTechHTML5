@@ -2,6 +2,7 @@
 * HOME PAGE CSS
 */
 
+<<<<<<< HEAD
 .header
 {
   text-align: center;
@@ -46,13 +47,52 @@
   padding-top: 5px;
 }
 
+=======
 
+.head {
 
-/* Space out content a bit */
-body {
-  padding-top: 20px;
-  padding-bottom: 20px;
+	font: bold italic 18px Arvo;
+
 }
+
+#heading1{
+
+	font: italic 16px/20px Arvo;
+}
+
+.heading2{
+	font: bold italic 16px/20px Arvo;
+}
+.snippet{
+	font: 10px/15px Arvo;
+}
+#title{
+	font: italic 16px Arvo;
+	text-align: center;
+}
+.title1{
+	font: italic 12px/15px Arvo;
+	text-transform: uppercase;
+}
+#travelhead{
+	font: bold 12px Arvo;
+}
+.thead{
+	font: bold 12px/15px Arvo;
+}
+#banner{
+	background-color: #cccccc;
+}
+#bannerTop{
+	font: 12px Arvo;
+	color:#ffffff;
+	text-align: right;
+}
+#bannerMid{
+	font: bold italic 18px Arvo;
+	text-align: center;
+>>>>>>> d55c63ab6d2d109720911a7343189743a315e79a
+
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
@@ -62,18 +102,6 @@ body {
   padding-left: 15px;
 }
 
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
-}
-/* Make the masthead heading the same height as the navigation */
-.header h3 {
-  padding-bottom: 19px;
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 40px;
-}
-
 /* Custom page footer */
 .footer {
   padding-top: 19px;
@@ -81,6 +109,10 @@ body {
   border-top: 1px solid #e5e5e5;
 }
 
+<<<<<<< HEAD
+=======
+/* Customize container */
+>>>>>>> d55c63ab6d2d109720911a7343189743a315e79a
 .container-narrow > hr {
   margin: 30px 0;
 }

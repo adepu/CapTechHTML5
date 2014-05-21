@@ -9,7 +9,14 @@
     <meta name="author" content="">
     <!-- <link rel="shortcut icon" href="../../assets/ico/favicon.ico"> -->
 
-    <title>Narrow Jumbotron Template for Bootstrap</title>
+    <title>HTML5Challenge</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" >
+
+    <link rel="stylesheet" type="text/css" href="
+    http://fonts.googleapis.com/css?family=Arvo:400,700">
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
@@ -19,8 +26,8 @@
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Arvo:400,700">
     <!-- Style sheet for "Click to expand" arrow -->
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <!-- Link to home.css -->
-    <link rel="stylesheet" type="text/css" href="_assets/css/banner.css">
+    <!-- Link to header.css -->
+    <link rel="stylesheet" type="text/css" href="_assets/css/header.css">
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -34,8 +41,20 @@
 
   <body>
 
-    <div class="container">
-      <nav class="base top-nav">
+    <div class="base">
+      <nav class="header top-nav">
+        <ul class="header top-nav">
+          <li><i class="fa fa-bars"></i> Sections</li>
+          <li><i class="fa fa-search"></i> Search</li>
+          <li><span class="header top-nav username">joshstickles...</span> <i class="fa fa-cogs"></i></li>
+        </ul>
+      </nav>
+      <hr class="header divider">
+      <p class="header title">CapTech.io News</p>
+      <p class="header date">Monday, June 12 2014</p>
+      <hr class="header divider">
+
+      <nav class="header categories">
         <ul>
           <li>World</li>
           <li>Business</li>       
@@ -45,46 +64,23 @@
           <li>Video</li>
         </ul>
       </nav>
-      <div id="banner" class="header">
-        <p class="pull-right">
+      <div id="banner" class="base">
+        <span class="pull-right">
+          <i class="fa fa-chevron-down pull-right" id="arrow"></i>
           Click to expand
-          <i class="fa fa-chevron-down"></i>
-        </p>
+        </span>
         <p>
           Josh Stickles T-Shirts and Temporary Tatoos Now Available in the CapTech Store.
         </p>
       </div>
+
+      <footer>
+        <!-- 
+          INCLUDE JAVASCRIPTS
+        -->
+      </footer>
     </div>
-
-      <div class="row marketing">
-        <div class="col-lg-6">
-          <h4>Subheading</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-
-          <h4>Subheading</h4>
-          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-          <h4>Subheading</h4>
-          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-        </div>
-
-        <div class="col-lg-6">
-          <h4>Subheading</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-
-          <h4>Subheading</h4>
-          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-          <h4>Subheading</h4>
-          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-        </div>
-      </div>
-
-      <div class="footer">
-        <p>&copy; Company 2014</p>
-      </div>
-
-    </div> <!-- /container -->
+  <!-- /container -->
 
 
     <!-- Bootstrap core JavaScript
