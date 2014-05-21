@@ -9,11 +9,6 @@
 
 }
 
-#left {
-
-	font: 12px Arvo;
-}
-
 #heading1{
 
 	font: italic 16px/20px Arvo;
@@ -31,11 +26,12 @@
 }
 .title1{
 	font: italic 12px/15px Arvo;
+	text-transform: uppercase;
 }
 #travelhead{
 	font: bold 12px Arvo;
 }
-#thead{
+.thead{
 	font: bold 12px/15px Arvo;
 }
 #banner{
@@ -86,11 +82,6 @@ body {
 }
 
 /* Customize container */
-@media (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
-}
 .container-narrow > hr {
   margin: 30px 0;
 }
