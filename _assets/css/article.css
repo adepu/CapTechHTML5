@@ -1,5 +1,4 @@
-/**
-<<<<<<< HEAD
+/*
 * Article CSS
 */
 
@@ -42,10 +41,8 @@
 	font-size: 18px;
 	color: #F8F8F8;
 	padding-top: 5px;
-=======
-* HEADER CSS
-*/
 
+}
 .base
 {
 	font-family: 'Arvo', serif;
@@ -92,7 +89,6 @@
 .header.categories
 {
 	font-size: 14px;
->>>>>>> d55c63ab6d2d109720911a7343189743a315e79a
 }
 /**
 *Article CSS
