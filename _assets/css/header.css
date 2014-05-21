@@ -115,7 +115,12 @@
 {
 	font-size: 22px;
 	color: #F8F8F8;
-	margin-top: 0px;
+	margin-top: -10px;
 	padding-top: 0px;
 	vertical-align: text-top;
+}
+
+#expand {
+	margin-right: 15px;
+	margin-bottom: -35px;
 }
