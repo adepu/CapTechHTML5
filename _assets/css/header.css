@@ -78,6 +78,12 @@
 {
 	text-align: center;
 }
+
+.header.categories a
+{
+	color: black;
+}
+
 .header.categories ul li
 {
 	text-align: center;
