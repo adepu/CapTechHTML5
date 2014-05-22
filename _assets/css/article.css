@@ -17,18 +17,6 @@
 	height: 50px;
 	padding: 5px;
 }
-.header.top-nav ul li
-{
-	font-size: 9pt;
-	color: #333333;
-	text-transform: uppercase;
-	display: inline;
-	padding-right: 20px;
-}
-.header.top-nav ul li.active
-{
-	font-weight: bold;
-}
 .pull-right
 {
 	font-size: 9pt;
@@ -57,39 +45,7 @@
 	text-transform: uppercase;
 }
 
-.header.top-nav ul
-{
-	margin-top: 0;
-	padding: 0px;
-}
 
-.header.top-nav ul li
-{
-	font-size: 9px;
-	text-align: top;
-	vertical-align: middle;
-	display: inline;
-} 
-
-.header.title
-{
-	font-weight: bold;
-	font-size: 36px;
-	text-align: center;
-	margin: 0;
-}
-
-.header.date
-{
-	font-size: 14px;
-	text-align: center;
-	margin: 0;
-}
-
-.header.categories
-{
-	font-size: 14px;
-}
 /**
 *Article CSS
 */
@@ -113,7 +69,7 @@
 	font: italic 16px/18px Arvo;
 	color: #666666;
 }
-#relatedContent{
+.relatedContent{
 	font: 12px/15px Arvo;
 	color: #666666;
 }
