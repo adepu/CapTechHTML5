@@ -82,6 +82,22 @@
               cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
               proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
               </p>
+              <!-- test -->
+              <div id="articles"></div>
+                <script id="articleTemplate" type="text/template">
+                <div class="article">
+                        <div class="info">
+                            <div class="name">
+                                <%= main.fullStory %>
+                            </div>
+                            <div class="aside">
+                              <%= aside.fullStory %>
+                            </div>
+                        </div>
+                    </div>
+                  <br/>
+               </script>
+              <!-- test -->
               <hr>
               <h4 class="head">Eric Schmidt</h4>
               <p class="snippet">
@@ -187,6 +203,18 @@
     <!-- Placed at the end of the document so the pages load faster -->
     
     <!-- Latest compiled and minified JavaScript -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="http://documentcloud.github.com/underscore/underscore-min.js"></script>
+    <script src="http://documentcloud.github.com/backbone/backbone-min.js"></script>
+
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" 
+    src="./_assets/backbone/models/article.js"></script>
+    <script type="text/javascript" 
+    src="./_assets/backbone/collections/articleList.js"></script>
+    <script type="text/javascript" 
+    src="./_assets/backbone/views/appView.js"></script>
+
   </body>
 </html>
