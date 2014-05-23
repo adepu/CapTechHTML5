@@ -34,40 +34,42 @@
 
   <body>
     <div class="base">
-      <nav class="header top-nav">
-        <ul class="header top-nav">
-          <li class="pull-left"><i class="fa fa-bars"></i> Sections</li>
-          <li class="pull-left"><i class="fa fa-search"></i> Search</li>
-          <li><span class="header top-nav username">joshstickles...</span> <i class="fa fa-cogs"></i></li>
-        </ul>
-      </nav>
-      <hr class="header divider">
-      <p class="header title">CapTech.io News</p>
-      <p class="header date">Monday, June 12 2014</p>
-      <hr class="header divider">
+      <div class="container">
+          <nav class="header top-nav">
+            <ul class="header top-nav">
+              <li class="pull-left"><i class="fa fa-bars"></i> Sections</li>
+              <li class="pull-left"><i class="fa fa-search"></i> Search</li>
+              <li><span class="header top-nav username">joshstickles...</span> <i class="fa fa-cogs"></i></li>
+            </ul>
+          </nav>
+          <hr class="header divider">
+          <p class="header title">CapTech.io News</p>
+          <p class="header date">Monday, June 12 2014</p>
+          <hr class="header divider">
 
-      <nav class="header categories">
-        <ul>
-          <li><a href="#/category/1">World</a></li>
-          <li><a href="#/category/2">Business</a></li>       
-          <li><a href="#/category/3">Opinion</a></li>
-          <li><a href="#/category/4">Sports</a></li>
-          <li><a href="#/category/5">Fashion &amp; Style</a></li>
-          <li><a href="#/category/6">Video</a></li>
-        </ul>
-      </nav>
-      <div class="row">
-          <a class="pull-right" id="banner-button">
-            Click to expand
-            <span id="arrow">
-              <i class="fa fa-chevron-down"></i>
-            </span>
-          </a>
-        </div>
-      <div class="banner collapse" id="collapsed">
-        <p id="message">
-          Josh Stickles T-Shirts and Temporary Tatoos Now Available in the CapTech Store.
-        </p>
+          <nav class="header categories">
+            <ul>
+              <li><a href="#/category/1">World</a></li>
+              <li><a href="#/category/2">Business</a></li>       
+              <li><a href="#/category/3">Opinion</a></li>
+              <li><a href="#/category/4">Sports</a></li>
+              <li><a href="#/category/5">Fashion &amp; Style</a></li>
+              <li><a href="#/category/6">Video</a></li>
+            </ul>
+          </nav>
+          <div class="row">
+              <a class="pull-right" id="banner-button">
+                Click to expand
+                <span id="arrow">
+                  <i class="fa fa-chevron-down"></i>
+                </span>
+              </a>
+            </div>
+          <div class="banner collapse" id="collapsed">
+            <p id="message">
+              Josh Stickles T-Shirts and Temporary Tatoos Now Available in the CapTech Store.
+            </p>
+          </div>
       </div>
     <div class="container">
 
@@ -116,15 +118,17 @@
                 <% }); %>
             </div>
             <div class="col-md-8">
-              <img src="http://placehold.it/370x210" height="150">
+              <img src="http://placehold.it/371x210" style="width: 100%">
               <% _.each(main, function(article, index) { %> 
                 <%
                 if(index === 0){%>
                   <p id="heading1"><%= article.headLine %></p>
-                <%}else{%>
-                  <p class="heading2"><%= article.headLine %></p>
-                <%}
-                %>
+                <%}else if(index === 2){%>
+                    <img src="http://placehold.it/84x84" align="right">
+                    <p class="heading2"><%= article.headLine %></p>
+                <%} else {%>
+                  <p class="heading2"><%= article.headLine %></p>  
+                <%}%>
                  <p class="snippet">
                   <span class="location"><%= article.location %></span>
                     <%= article.snippet %></p>
@@ -145,7 +149,10 @@
                     </div>
                   <%} else {%>
                     <div class="col-md-6">
-                      <p class="title1"><%= article.headLine %></p>
+                      <p class="custom title1">
+                          <%= article.headLine %>
+                      </p>
+                      <img src="http://placehold.it/170x69" style="width: 100%">
                       <p class="snippet">
                         <span class="location"><%= article.location %></span>
                             <%= article.fullStory %></p>
@@ -159,10 +166,13 @@
                   if(index === 0){%>
                     <div class="col-md-6">
                       <p class="thead"><%= article.headLine %></p>
+                      <img src="http://placehold.it/171x87" style="width: 100%"></p>
+                      <img src="http://placehold.it/171x87" style="width: 100%"></p>
                     </div>
                   <%} else {%>
                     <div class="col-md-6">
                       <p class="thead"><%= article.headLine %></p>
+                      <img src="http://placehold.it/169x36" style="width: 100%"></p>
                       <p class="snippet">
                         <span class="location"><%= article.location %></span>
                             <%= article.snippet %></p>
@@ -193,10 +203,7 @@
 
     <script type="text/javascript" src="./_assets/backbone/models/article.js"></script>
     <script type="text/javascript" src="./_assets/backbone/collections/singleArticle.js"></script>
-<<<<<<< HEAD
     <script type="text/javascript" src="./_assets/backbone/collections/featuredArticle.js"></script>
-=======
->>>>>>> a26c27c94ff395f8e43210e803c9e33f407909ae
     <script type="text/javascript" src="./_assets/backbone/views/articleView.js"></script>
     <script type="text/javascript" src="./_assets/backbone/views/featuredView.js"></script>
     <script type="text/javascript" src="./_assets/backbone/routers/articleRouter.js"></script>
@@ -215,12 +222,8 @@
           $('.banner').toggleClass('collapse');
           $('.banner').toggleClass('expand');
 
-<<<<<<< HEAD
-
-=======
         });
       });
     </script>
->>>>>>> a26c27c94ff395f8e43210e803c9e33f407909ae
   </body>
 </html>
