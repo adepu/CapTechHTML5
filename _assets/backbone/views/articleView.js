@@ -3,6 +3,7 @@ var Article_View = Backbone.View.extend({
     template: _.template($('#articleTemplate').html()),
     initialize: function(){
         var self = this;
+        self.$el.empty();
         this.collection.fetch({
             success: function(response) {
                 self.render();
@@ -10,7 +11,7 @@ var Article_View = Backbone.View.extend({
         });
     },
     render: function () {
-        console.log(this.collection);
+        $('#banner').hide();
         _(this.collection.models).each(function(model){
             var articleTemplate = this.template(model.toJSON());
             this.$el.append(articleTemplate);
