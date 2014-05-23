@@ -24,3 +24,5 @@ var ArticleView = Backbone.View.extend({
 
 var worldArticleList = new World_ArticleList();
 var worldArticlesView = new ArticleView({ collection: worldArticleList });
+var featuredArticleList = new featuredArticleList();
+var featuredArticlesView = new ArticleView({ collection: featuredArticleList});
