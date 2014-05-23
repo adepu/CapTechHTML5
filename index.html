@@ -58,8 +58,10 @@
       </nav>
       <div class="row">
           <a class="pull-right" id="banner-button">
-            Click to expand
             <span id="arrow">
+              <span id="button-text">
+              Click to expand
+              </span>
               <i class="fa fa-chevron-down"></i>
             </span>
           </a>
@@ -208,10 +210,12 @@
           if($('.banner').attr('id') == "collapsed") {
             $('.banner').height($('.banner').height() * 2);
             $('.banner').attr('id', 'expanded');
+            $('#banner-button').html('<span id="arrow">Click to collapse<i class="fa fa-chevron-up"></i></span>');
           }
           else {
             $('.banner').height($('.banner').height() / 2);
             $('.banner').attr('id', 'collapsed');
+            $('#banner-button').html('<span id="arrow">Click to expand<i class="fa fa-chevron-down"></i></span>');
           }
           $('.banner').toggleClass('collapse');
           $('.banner').toggleClass('expand');
