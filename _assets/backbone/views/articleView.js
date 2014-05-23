@@ -11,7 +11,7 @@ var Article_View = Backbone.View.extend({
         });
     },
     render: function () {
-        $('#banner').hide();
+        $('.banner').hide();
         _(this.collection.models).each(function(model){
             var articleTemplate = this.template(model.toJSON());
             this.$el.append(articleTemplate);
