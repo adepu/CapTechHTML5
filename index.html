@@ -57,14 +57,14 @@
         </ul>
       </nav>
       <div class="row">
-          <div class="pull-right" id="expand">
+          <a class="pull-right" id="banner-button">
             Click to expand
             <span id="arrow">
               <i class="fa fa-chevron-down"></i>
             </span>
-          </div>
+          </a>
         </div>
-      <div id="banner">
+      <div class="banner collapse" id="collapsed">
         <p id="message">
           Josh Stickles T-Shirts and Temporary Tatoos Now Available in the CapTech Store.
         </p>
@@ -230,6 +230,23 @@
     <script type="text/javascript" src="./_assets/backbone/collections/singleArticle.js"></script>
     <script type="text/javascript" src="./_assets/backbone/views/articleView.js"></script>
     <script type="text/javascript" src="./_assets/backbone/routers/articleRouter.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('#banner-button').on('click', function(event){
+         
+          if($('.banner').attr('id') == "collapsed") {
+            $('.banner').height($('.banner').height() * 2);
+            $('.banner').attr('id', 'expanded');
+          }
+          else {
+            $('.banner').height($('.banner').height() / 2);
+            $('.banner').attr('id', 'collapsed');
+          }
+          $('.banner').toggleClass('collapse');
+          $('.banner').toggleClass('expand');
 
+        });
+      });
+    </script>
   </body>
 </html>
