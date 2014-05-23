@@ -108,13 +108,12 @@
 .collapse
 {
 	display: block;
-	padding-bottom: 12px;
 	font-size: 18px;
 	font-weight: bold;
 	font-style: italic;
 	color: #333333;
-	background-color:#D3D3D3;
 	height: 67px;
+	background-color:#D3D3D3;
     overflow: hidden;
     transition: height 1s;
     -moz-transition: height 1s; /* Firefox 4 */
@@ -134,13 +133,6 @@
     -webkit-transition: height 1s; /* Safari and Chrome */
     -o-transition: height 1s; /* Opera */
 }
-
-/* end of http://jsfiddle.net/Bq6eK/13/ code*/
-.message
-{
-	padding-top: 12px;
-
-}
 .pull-right
 {
 	font-size: 9pt;
@@ -159,12 +151,7 @@
 	padding-top: 0px;
 	vertical-align: text-top;
 }
-
 #banner-button {
 	margin-right: 15px;
 	margin-bottom: -35px;
-}
-#button-text
-{
-	font-size: 16px;
 }
