@@ -2,7 +2,7 @@
 * HOME PAGE CSS
 */
 
-#banner.header
+.banner
 {
   font-size: 16px; /*should be 18pt*/
   font-weight: bold;
@@ -71,10 +71,14 @@
 .thead{
 	font: bold 12px/15px Arvo;
 }
+<<<<<<< HEAD
 .location{
   font: bold 10px/15px Arvo;
 }
 #banner{
+=======
+.banner{
+>>>>>>> a26c27c94ff395f8e43210e803c9e33f407909ae
 	background-color: #cccccc;
 }
 #bannerTop{
@@ -109,9 +113,6 @@
 }
 
 /* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-}
 .marketing p + h4 {
   margin-top: 28px;
 }

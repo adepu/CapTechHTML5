@@ -19,6 +19,8 @@
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./_assets/css/home.css">
     <link rel="stylesheet" type="text/css" href="_assets/css/header.css">
+    <link rel="stylesheet" type="text/css" href="_assets/css/article.css">
+
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -34,8 +36,8 @@
     <div class="base">
       <nav class="header top-nav">
         <ul class="header top-nav">
-          <li><i class="fa fa-bars"></i> Sections</li>
-          <li><i class="fa fa-search"></i> Search</li>
+          <li class="pull-left"><i class="fa fa-bars"></i> Sections</li>
+          <li class="pull-left"><i class="fa fa-search"></i> Search</li>
           <li><span class="header top-nav username">joshstickles...</span> <i class="fa fa-cogs"></i></li>
         </ul>
       </nav>
@@ -55,14 +57,14 @@
         </ul>
       </nav>
       <div class="row">
-          <div class="pull-right" id="expand">
+          <a class="pull-right" id="banner-button">
             Click to expand
             <span id="arrow">
               <i class="fa fa-chevron-down"></i>
             </span>
-          </div>
+          </a>
         </div>
-      <div id="banner">
+      <div class="banner collapse" id="collapsed">
         <p id="message">
           Josh Stickles T-Shirts and Temporary Tatoos Now Available in the CapTech Store.
         </p>
@@ -191,11 +193,34 @@
 
     <script type="text/javascript" src="./_assets/backbone/models/article.js"></script>
     <script type="text/javascript" src="./_assets/backbone/collections/singleArticle.js"></script>
+<<<<<<< HEAD
     <script type="text/javascript" src="./_assets/backbone/collections/featuredArticle.js"></script>
+=======
+>>>>>>> a26c27c94ff395f8e43210e803c9e33f407909ae
     <script type="text/javascript" src="./_assets/backbone/views/articleView.js"></script>
     <script type="text/javascript" src="./_assets/backbone/views/featuredView.js"></script>
     <script type="text/javascript" src="./_assets/backbone/routers/articleRouter.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('#banner-button').on('click', function(event){
+         
+          if($('.banner').attr('id') == "collapsed") {
+            $('.banner').height($('.banner').height() * 2);
+            $('.banner').attr('id', 'expanded');
+          }
+          else {
+            $('.banner').height($('.banner').height() / 2);
+            $('.banner').attr('id', 'collapsed');
+          }
+          $('.banner').toggleClass('collapse');
+          $('.banner').toggleClass('expand');
 
+<<<<<<< HEAD
 
+=======
+        });
+      });
+    </script>
+>>>>>>> a26c27c94ff395f8e43210e803c9e33f407909ae
   </body>
 </html>

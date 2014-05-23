@@ -17,6 +17,9 @@
 .header.divider
 {
 	border-top: 2px solid grey;
+	margin: 10px;
+	margin-right: 0px;
+	margin-left:0px;
 }
 .header.top-nav.username 
 {
@@ -42,8 +45,12 @@
 	text-align: top;
 	vertical-align: middle;
 	display: inline;
-	padding-right: 5px
+	padding-right: 5px;
 } 
+.header.top-nav ul li.active
+{
+	font-weight: bold;
+}
 .header.top-nav ul li:last-child
 {
 	float: right;
@@ -74,33 +81,62 @@
 {
 	font-weight: bold;
 }
+.header.categories {
+	margin: 0;
+}
+
 .header.categories ul
 {
 	text-align: center;
 }
-
 .header.categories a
 {
 	color: black;
 }
-
 .header.categories ul li
 {
 	text-align: center;
 	font-size: 9pt;
 	color: #333333;
 	display: inline;
-	padding-right: 20px;
+	padding-right: 40px;
 }
-#banner
+.header.categories ul li.active
 {
+	font-weight: bold;
+}
+.collapse
+{
+	display: block;
 	font-size: 18px;
 	font-weight: bold;
 	font-style: italic;
 	color: #333333;
 	background-color:#D3D3D3;
 	height: 50px;
+/* taken from http://jsfiddle.net/Bq6eK/13/ */
+    overflow: hidden;
+    transition: height 1s;
+    -moz-transition: height 1s; /* Firefox 4 */
+    -webkit-transition: height 1s; /* Safari and Chrome */
+    -o-transition: height 1s; /* Opera */
 }
+
+.expand
+{
+	font-size: 18px;
+	font-weight: bold;
+	font-style: italic;
+	color: #333333;
+	background-color:#D3D3D3;
+/* taken from http://jsfiddle.net/Bq6eK/13/ */
+    overflow: hidden;
+    transition: height 1s;
+    -moz-transition: height 1s; /* Firefox 4 */
+    -webkit-transition: height 1s; /* Safari and Chrome */
+    -o-transition: height 1s; /* Opera */
+}
+/* end of http://jsfiddle.net/Bq6eK/13/ code*/
 #message
 {
 	padding-top: 12px;
@@ -126,7 +162,7 @@
 	vertical-align: text-top;
 }
 
-#expand {
+#banner-button {
 	margin-right: 15px;
 	margin-bottom: -35px;
 }
