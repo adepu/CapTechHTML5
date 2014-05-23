@@ -2,7 +2,7 @@
 * HOME PAGE CSS
 */
 
-#banner.header
+.banner
 {
   font-size: 16px; /*should be 18pt*/
   font-weight: bold;
@@ -71,7 +71,7 @@
 .thead{
 	font: bold 12px/15px Arvo;
 }
-#banner{
+.banner{
 	background-color: #cccccc;
 }
 #bannerTop{
