@@ -102,7 +102,7 @@
 	font-style: italic;
 	color: #333333;
 	background-color:#D3D3D3;
-	height: 50px;
+	height: 67px;
 /* taken from http://jsfiddle.net/Bq6eK/13/ */
     overflow: hidden;
     transition: height 1s;
@@ -110,7 +110,6 @@
     -webkit-transition: height 1s; /* Safari and Chrome */
     -o-transition: height 1s; /* Opera */
 }
-
 .expand
 {
 	font-size: 18px;
@@ -118,14 +117,12 @@
 	font-style: italic;
 	color: #333333;
 	background-color:#D3D3D3;
-/* taken from http://jsfiddle.net/Bq6eK/13/ */
     overflow: hidden;
     transition: height 1s;
     -moz-transition: height 1s; /* Firefox 4 */
     -webkit-transition: height 1s; /* Safari and Chrome */
     -o-transition: height 1s; /* Opera */
 }
-/* end of http://jsfiddle.net/Bq6eK/13/ code*/
 #message
 {
 	padding-top: 12px;
