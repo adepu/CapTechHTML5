@@ -42,7 +42,7 @@
 	text-align: top;
 	vertical-align: middle;
 	display: inline;
-	padding-right: 5px
+	padding-right: 5px;
 } 
 .header.top-nav ul li:last-child
 {
@@ -90,7 +90,11 @@
 	font-size: 9pt;
 	color: #333333;
 	display: inline;
-	padding-right: 20px;
+	padding-right: 40px;
+}
+.header.categories ul li.active
+{
+	font-weight: bold;
 }
 #banner
 {
