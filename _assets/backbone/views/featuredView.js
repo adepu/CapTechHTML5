@@ -1,27 +1,26 @@
-var featuredCol1View = Backbone.View.extend({
-    el: "#featuredCol1",
-    template: _.template($('#featured1Template').html()),
+var featuredColView = Backbone.View.extend({
+    el: "#featuredArticles",
+    template: _.template($('#featuredArticlesTemplate').html()),
     initialize: function(){
         var self = this;
+        self.$el.empty();
         this.collection.fetch({
             success: function(response) {
                 self.render();
-                /*console.log(response);*/
            }
         });
     },
-    render: function () {
+    render: function (){
         _(this.collection.models).each(function(model){
-            var featured1Template = this.template(model.toJSON());
-            this.$el.append(featured1Template);
+            
+            /*m = new Backbone.Model(model.attributes);*/
+            console.log(model.toJSON());
+            var featuredArticlesTemplate = this.template(model.toJSON());
+            this.$el.append(featuredArticlesTemplate);
         }, this);
         return this;
     },
-    renderItem: function(featuredArticle) {
-        var featured1Template = this.template(article.toJSON());
-        this.$el.append(featured1Template);
-    }
 });
 
-var featuredCol1List = new featured_Col1List();
-var featuredCol1Views = new featuredCol1View({ collection: featuredCol1List});
+var featuredColList = new Featured_Article();
+var featuredColViews = new featuredColView({ collection: featuredColList});

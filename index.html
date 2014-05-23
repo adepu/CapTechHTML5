@@ -102,106 +102,71 @@
         <div class="col-md-12">
           <div class="col-md-8">
             <div class="col-md-4">
-              <h4 class="head">Josh Stickles Wins Olympics</h4>
-              <p class="snippet">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-              <hr>
-              <h4 class="head">Eric Schmidt</h4>
-              <p class="snippet">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
+              <% _.each(aside, function(article, index) { %> 
+                <p class="head"><%= article.headLine %></p>
+                <p class="snippet">
+                  <span class="location"><%= article.location %></span>
+                    <%= article.snippet %></p>
+                <%
+                if(index === 0){%>
+                  <hr>
+                <%}%>
+                <% }); %>
             </div>
             <div class="col-md-8">
-              <img src="" height="150">
-              <p id="heading1">No one should Be Using IE</p>
-              <p class="snippet">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-              <h4 class="heading2">NASDAQ</h4>
-              <p class="snippet">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-              <h4 class="heading2">200 yards</h4>
-              <p class="snippet">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
+              <img src="http://placehold.it/370x210" height="150">
+              <% _.each(main, function(article, index) { %> 
+                <%
+                if(index === 0){%>
+                  <p id="heading1"><%= article.headLine %></p>
+                <%}else{%>
+                  <p class="heading2"><%= article.headLine %></p>
+                <%}
+                %>
+                 <p class="snippet">
+                  <span class="location"><%= article.location %></span>
+                    <%= article.snippet %></p>
+
+                <% }); %>
             </div>
           </div>
           <div class="col-md-4">
             <p id="title">The Opinion Pages</p>
-            <div class="col-md-6">
-              <p class="title1">If Stickles</p>
-              <p class="snippet">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-            </div>
-            <div class="col-md-6">
-              <p class="title1"><b>Mac Rumors:</b> Next iPhone</p>
-              <p class="snippet">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-            </div>
-            <p id="travelhead">TRAVEL<font color="#cccccc">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+              <% _.each(opinion, function(article, index) { %>
+                <%
+                  if(index === 0){%>
+                    <div class="col-md-6">
+                      <p class="title1"><%= article.headLine %></p>
+                      <p class="snippet">
+                        <span class="location"><%= article.location %></span>
+                            <%= article.fullStory %></p>
+                    </div>
+                  <%} else {%>
+                    <div class="col-md-6">
+                      <p class="title1"><%= article.headLine %></p>
+                      <p class="snippet">
+                        <span class="location"><%= article.location %></span>
+                            <%= article.fullStory %></p>
+                    </div>
+                    <%}%>
+                <% }); %>
+            <p id="travelhead">TRAVEL<font color="#cccccc">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
             </font></p>
-            <div class="col-md-6">
-              <p class="thead">Tours</p>
-              <p class="snippet">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-            </div>
-            <div class="col-md-6">
-              <p class="thead"><i>Hotel Review:</i> The Stickle Four Seasons</p>
-              <p class="snippet">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-            </div>
-          </div>
+              <% _.each(travel, function(article, index) { %>
+                <%
+                  if(index === 0){%>
+                    <div class="col-md-6">
+                      <p class="thead"><%= article.headLine %></p>
+                    </div>
+                  <%} else {%>
+                    <div class="col-md-6">
+                      <p class="thead"><%= article.headLine %></p>
+                      <p class="snippet">
+                        <span class="location"><%= article.location %></span>
+                            <%= article.snippet %></p>
+                    </div>
+                    <%}%>
+                <% }); %>
         </div>
         </script>
       </div>
@@ -225,9 +190,12 @@
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
     <script type="text/javascript" src="./_assets/backbone/models/article.js"></script>
-    <script type="text/javascript" src="./_assets/backbone/collections/articleList.js"></script>
+    <script type="text/javascript" src="./_assets/backbone/collections/singleArticle.js"></script>
+    <script type="text/javascript" src="./_assets/backbone/collections/featuredArticle.js"></script>
     <script type="text/javascript" src="./_assets/backbone/views/articleView.js"></script>
+    <script type="text/javascript" src="./_assets/backbone/views/featuredView.js"></script>
     <script type="text/javascript" src="./_assets/backbone/routers/articleRouter.js"></script>
+
 
   </body>
 </html>
