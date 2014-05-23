@@ -1,5 +1,5 @@
-var ArticleView = Backbone.View.extend({
-    el: "#articles",
+var Article_View = Backbone.View.extend({
+    el: "#article",
     template: _.template($('#articleTemplate').html()),
     initialize: function(){
         var self = this;
@@ -10,19 +10,11 @@ var ArticleView = Backbone.View.extend({
         });
     },
     render: function () {
+        console.log(this.collection);
         _(this.collection.models).each(function(model){
             var articleTemplate = this.template(model.toJSON());
             this.$el.append(articleTemplate);
         }, this);
         return this;
-    },
-    renderItem: function(article) {
-        var articleTemplate = this.template(article.toJSON());
-        this.$el.append(articleTemplate);
     }
 });
-
-var worldArticleList = new World_ArticleList();
-var worldArticlesView = new ArticleView({ collection: worldArticleList });
-var featuredArticleList = new featuredArticleList();
-var featuredArticlesView = new ArticleView({ collection: featuredArticleList});
