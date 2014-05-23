@@ -17,9 +17,12 @@
   font-style: italic;
   color: #333333;
   background-color:#D3D3D3;
-  height: 50px;
-  padding-top: 15;
-  padding-bottom: 15;
+  padding-top: 20px;
+  margin-bottom: 15px;
+}
+.banner p:nth-child(2)
+{
+  padding-top: 15px;
 }
 .header.top-nav ul li
 {
@@ -46,19 +49,13 @@
   color: #F8F8F8;
   padding-top: 5px;
 }
-
-
 .head {
 
 	font: bold italic 18px Arvo;
-
 }
-
 #heading1{
-
 	font: italic 16px/20px Arvo;
 }
-
 .heading2{
 	font: bold italic 16px/20px Arvo;
 }
@@ -86,10 +83,14 @@
 .location{
   font: bold 10px/15px Arvo;
 }
+<<<<<<< HEAD
 
 
 .banner{
 
+=======
+.banner{
+>>>>>>> 4a10b1d70cd88c80863483f5d28d4cccde436696
 	background-color: #cccccc;
 }
 

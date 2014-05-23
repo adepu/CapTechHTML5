@@ -1,12 +1,7 @@
 var Article_Router = Backbone.Router.extend({
   routes: {
-      '': 'index',
       'category/:id': 'show',
       '*default': 'default'
-  },
-
-  index: function(){
-     
   },
 
   show: function(id){
@@ -15,7 +10,11 @@ var Article_Router = Backbone.Router.extend({
   },
 
   default: function(){
-      alert('hey');
+      var Advertisement = new Banner_Ad();
+      var BannerView = new Banner_View({ collection: Advertisement });
+
+      var featuredColList = new Featured_Article();
+      var featuredColViews = new Featured_Col_View({ collection: featuredColList });
   }
 
 

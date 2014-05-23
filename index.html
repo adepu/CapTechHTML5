@@ -34,6 +34,7 @@
 
   <body>
     <div class="base">
+<<<<<<< HEAD
       <div class="container">
           <nav class="header top-nav">
             <ul class="header top-nav">
@@ -71,6 +72,41 @@
             </p>
           </div>
       </div>
+=======
+      <nav class="header top-nav">
+        <ul class="header top-nav">
+          <li class="pull-left"><i class="fa fa-bars"></i> Sections</li>
+          <li class="pull-left"><i class="fa fa-search"></i> Search</li>
+          <li><span class="header top-nav username">joshstickles...</span> <i class="fa fa-cogs"></i></li>
+        </ul>
+      </nav>
+      <hr class="header divider">
+      <p class="header title">CapTech.io News</p>
+      <p class="header date">Monday, June 12 2014</p>
+      <hr class="header divider">
+
+      <nav class="header categories">
+        <ul>
+          <li><a href="#/category/1">World</a></li>
+          <li><a href="#/category/2">Business</a></li>       
+          <li><a href="#/category/3">Opinion</a></li>
+          <li><a href="#/category/4">Sports</a></li>
+          <li><a href="#/category/5">Fashion &amp; Style</a></li>
+          <li><a href="#/category/6">Video</a></li>
+        </ul>
+      </nav>
+      <div class="row">
+          <a class="pull-right" id="banner-button">
+            <span id="arrow">
+              <i class="fa fa-chevron-down"></i>
+            </span>
+          </a>
+        </div>
+      <div class="banner collapse" id="collapsed"></div>
+      <script id="bannerTemplate" type="text/template">
+      	<p class="text-center"><%= message %></p>
+      </script>
+>>>>>>> 4a10b1d70cd88c80863483f5d28d4cccde436696
     <div class="container">
 
       <div class="row marketing">
@@ -202,10 +238,18 @@
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
     <script type="text/javascript" src="./_assets/backbone/models/article.js"></script>
+    <script type="text/javascript" src="./_assets/backbone/models/advertisement.js"></script>
+
     <script type="text/javascript" src="./_assets/backbone/collections/singleArticle.js"></script>
     <script type="text/javascript" src="./_assets/backbone/collections/featuredArticle.js"></script>
+<<<<<<< HEAD
+=======
+    <script type="text/javascript" src="./_assets/backbone/collections/bannerAd.js"></script>
+
+>>>>>>> 4a10b1d70cd88c80863483f5d28d4cccde436696
     <script type="text/javascript" src="./_assets/backbone/views/articleView.js"></script>
     <script type="text/javascript" src="./_assets/backbone/views/featuredView.js"></script>
+    <script type="text/javascript" src="./_assets/backbone/views/bannerView.js"></script>
     <script type="text/javascript" src="./_assets/backbone/routers/articleRouter.js"></script>
     <script>
       $(document).ready(function(){
@@ -214,14 +258,19 @@
           if($('.banner').attr('id') == "collapsed") {
             $('.banner').height($('.banner').height() * 2);
             $('.banner').attr('id', 'expanded');
+            $('#banner-button').html('<span id="arrow">Click to collapse<i class="fa fa-chevron-up"></i></span>');
           }
           else {
             $('.banner').height($('.banner').height() / 2);
             $('.banner').attr('id', 'collapsed');
+            $('#banner-button').html('<span id="arrow">Click to expand<i class="fa fa-chevron-down"></i></span>');
           }
           $('.banner').toggleClass('collapse');
           $('.banner').toggleClass('expand');
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4a10b1d70cd88c80863483f5d28d4cccde436696
         });
       });
     </script>
