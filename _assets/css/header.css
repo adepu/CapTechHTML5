@@ -17,6 +17,9 @@
 .header.divider
 {
 	border-top: 2px solid grey;
+	margin: 10px;
+	margin-right: 0px;
+	margin-left:0px;
 }
 .header.top-nav.username 
 {
@@ -44,6 +47,10 @@
 	display: inline;
 	padding-right: 5px
 } 
+.header.top-nav ul li.active
+{
+	font-weight: bold;
+}
 .header.top-nav ul li:last-child
 {
 	float: right;
@@ -74,6 +81,10 @@
 {
 	font-weight: bold;
 }
+.header.categories {
+	margin: 0;
+}
+
 .header.categories ul
 {
 	text-align: center;
