@@ -137,11 +137,9 @@
     -o-transition: height 1s; /* Opera */
 }
 /* end of http://jsfiddle.net/Bq6eK/13/ code*/
-#message
+.message
 {
 	padding-top: 12px;
-	padding-bottom: 12px;
-	text-align: center;
 }
 .pull-right
 {

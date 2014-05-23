@@ -64,11 +64,10 @@
             </span>
           </a>
         </div>
-      <div class="banner collapse" id="collapsed">
-        <p id="message">
-          Josh Stickles T-Shirts and Temporary Tatoos Now Available in the CapTech Store.
-        </p>
-      </div>
+      <div class="banner collapse" id="collapsed"></div>
+      <script id="bannerTemplate" type="text/template">
+      	<p class="message text-center"><%= message %></p>
+      </script>
     <div class="container">
 
       <div class="row marketing">
@@ -192,11 +191,15 @@
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
     <script type="text/javascript" src="./_assets/backbone/models/article.js"></script>
+    <script type="text/javascript" src="./_assets/backbone/models/advertisement.js"></script>
+
     <script type="text/javascript" src="./_assets/backbone/collections/singleArticle.js"></script>
     <script type="text/javascript" src="./_assets/backbone/collections/featuredArticle.js"></script>
+    <script type="text/javascript" src="./_assets/backbone/collections/bannerAd.js"></script>
 
     <script type="text/javascript" src="./_assets/backbone/views/articleView.js"></script>
     <script type="text/javascript" src="./_assets/backbone/views/featuredView.js"></script>
+    <script type="text/javascript" src="./_assets/backbone/views/bannerView.js"></script>
     <script type="text/javascript" src="./_assets/backbone/routers/articleRouter.js"></script>
     <script>
       $(document).ready(function(){
