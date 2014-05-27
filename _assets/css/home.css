@@ -55,6 +55,7 @@
 }
 #heading1{
 	font: italic 16px/20px Arvo;
+  margin-bottom: 0px;
 }
 .heading2{
 	font: bold italic 16px/20px Arvo;
