@@ -61,6 +61,7 @@
             <div class="row">
                 <a class="pull-right" id="banner-button">
                   <span id="arrow">
+                    Click to expand
                     <i class="fa fa-chevron-down"></i>
                   </span>
                 </a>
@@ -134,7 +135,7 @@
 
                   <% }); %>
               </div>
-            <div class="col-md-4">
+            <div class="col-md-4" id="hack">
               <p id="title">The Opinion Pages</p>
                 <% _.each(opinion, function(article, index) { %>
                   <%
@@ -150,7 +151,6 @@
                         <p class="custom title1">
                             <%= article.headLine %>
                         </p>
-                        <img src="http://placehold.it/170x69" style="width: 100%">
                         <p class="snippet">
                           <span class="location"><%= article.location %></span>
                           <%= article.fullStory %>
@@ -230,6 +230,7 @@
           $('.banner').toggleClass('collapse');
           $('.banner').toggleClass('expand');
         });
+
       });
     </script>
   </body>
