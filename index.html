@@ -77,28 +77,28 @@
       	<div id="article"></div>
       	<div id="featuredArticles"></div>
 		    <script id="articleTemplate" type="text/template">
-			<div class="">
-				<div class="col-md-7" style="border-right:thin #cccccc solid">
-					<p id="articleTitle"><%= main.headLine %></p>
-					<% if (main.numberOfImages > 0) { %>
-						<img src="http://placehold.it/600x350">
-					<% } %>
-					<p id="articleCaption"><%= main.fullStory %></p>
-					<p id="articleContent">
-						<%= main.snippet %>
-					</p>
-					</div>
-					<div class="col-md-5">
-					<p id="relatedTitle"><%= aside.headLine %></p>
-					<p class="relatedContent">
-						<%= aside.fullStory %>
-					</p>
-					<% if (aside.numberOfImages > 0) { %>
-						<img src="http://placehold.it/400x250">
-					<% } %>
-					<p class="relatedContent">
-						<%= aside.snippet %>
-					</p>
+			  <div class="col-md-10 col-md-offset-1">
+  				<div class="col-md-7" style="border-right:thin #cccccc solid">
+  					<p id="articleTitle"><%= main.headLine %></p>
+  					<% if (main.numberOfImages > 0) { %>
+  						<img src="http://placehold.it/600x350">
+  					<% } %>
+  					<p id="articleCaption"><%= main.fullStory %></p>
+  					<p id="articleContent">
+  						<%= main.snippet %>
+  					</p>
+  					</div>
+  					<div class="col-md-5">
+  					<p id="relatedTitle"><%= aside.headLine %></p>
+  					<p class="relatedContent">
+  						<%= aside.fullStory %>
+  					</p>
+  					<% if (aside.numberOfImages > 0) { %>
+  						<img src="http://placehold.it/400x250">
+  					<% } %>
+  					<p class="relatedContent">
+  						<%= aside.snippet %>
+  					</p>
 				</div>
 			</div>
 		</script>
