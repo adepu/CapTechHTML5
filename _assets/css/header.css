@@ -16,7 +16,7 @@
 }
 .header.divider
 {
-	border-top: 2px solid grey;
+	border-top: 2px solid #D3D3D3;
 	margin: 10px;
 	margin-right: 0px;
 	margin-left:0px;
@@ -113,16 +113,14 @@
 	font-weight: bold;
 	font-style: italic;
 	color: #333333;
+	height: 67px;
 	background-color:#D3D3D3;
-	height: 50px;
-/* taken from http://jsfiddle.net/Bq6eK/13/ */
     overflow: hidden;
     transition: height 1s;
     -moz-transition: height 1s; /* Firefox 4 */
     -webkit-transition: height 1s; /* Safari and Chrome */
     -o-transition: height 1s; /* Opera */
 }
-
 .expand
 {
 	font-size: 18px;
@@ -130,40 +128,32 @@
 	font-style: italic;
 	color: #333333;
 	background-color:#D3D3D3;
-/* taken from http://jsfiddle.net/Bq6eK/13/ */
     overflow: hidden;
     transition: height 1s;
     -moz-transition: height 1s; /* Firefox 4 */
     -webkit-transition: height 1s; /* Safari and Chrome */
     -o-transition: height 1s; /* Opera */
 }
-/* end of http://jsfiddle.net/Bq6eK/13/ code*/
-#message
-{
-	padding-top: 12px;
-	padding-bottom: 12px;
-	text-align: center;
-}
 .pull-right
 {
-	font-size: 9pt;
-	color: #F8F8F8;
-	font-style: normal;
 	text-align: right;
 	vertical-align: top;
 	padding-top: 0px;
-	padding-right: 0px;
+	padding-right: 5px;
 }
 #arrow
 {
-	font-size: 22px;
-	color: #F8F8F8;
-	margin-top: -10px;
-	padding-top: 0px;
+	font-size: 14px;
+	color: #FFFFFF;
 	vertical-align: text-top;
 }
-
-#banner-button {
+.fa
+{
+	font-size: 26px;
+}
+#banner-button 
+{
 	margin-right: 15px;
 	margin-bottom: -35px;
+	text-decoration: none;
 }
