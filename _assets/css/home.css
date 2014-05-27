@@ -50,7 +50,12 @@
   font: bold italic 18px Arvo;
 }
 #heading1{
+<<<<<<< HEAD
   font: italic 16px/20px Arvo;
+=======
+	font: italic 16px/20px Arvo;
+  margin-bottom: 0px;
+>>>>>>> 4f5264e0381631d4597df1acedee5b27d00dd2c6
 }
 .heading2{
   font: bold italic 16px/20px Arvo;
