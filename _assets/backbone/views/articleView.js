@@ -3,6 +3,7 @@ var Article_View = Backbone.View.extend({
     template: _.template($('#articleTemplate').html()),
     initialize: function(){
         var self = this;
+        $('#featuredArticles').empty();
         self.$el.empty();
         this.collection.fetch({
             success: function(response) {

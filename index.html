@@ -34,6 +34,7 @@
 
   <body>
     <div class="base">
+<<<<<<< HEAD
       <div class="container">
           <nav class="header top-nav">
             <ul class="header top-nav">
@@ -107,11 +108,51 @@
 
     <div class="container">
 
+=======
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <nav class="header top-nav">
+              <ul class="header top-nav">
+                <li class="pull-left"><i class="fa fa-bars"></i> Sections</li>
+                <li class="pull-left"><i class="fa fa-search"></i> Search</li>
+                <li><span class="header top-nav username">joshstickles...</span> <i class="fa fa-cogs"></i></li>
+              </ul>
+            </nav>
+            <hr class="header divider">
+            <p class="header title">CapTech.io News</p>
+            <p class="header date">Monday, June 12 2014</p>
+            <hr class="header divider">
+
+            <nav class="header categories">
+              <ul>
+                <li><a href="#/category/1">World</a></li>
+                <li><a href="#/category/2">Business</a></li>       
+                <li><a href="#/category/3">Opinion</a></li>
+                <li><a href="#/category/4">Sports</a></li>
+                <li><a href="#/category/5">Fashion &amp; Style</a></li>
+                <li><a href="#/category/6">Video</a></li>
+              </ul>
+            </nav>
+            <div class="row">
+                <a class="pull-right" id="banner-button">
+                  <span id="arrow">
+                    <i class="fa fa-chevron-down"></i>
+                  </span>
+                </a>
+              </div>
+            <div class="banner collapse" id="collapsed"></div>
+            <script id="bannerTemplate" type="text/template">
+            	<p class="text-center"><%= message %></p>
+            </script>
+          </div>
+        </div>
+>>>>>>> bdb8114e6bfb700a032d5928d9244f7652a6dcd7
       <div class="row marketing">
       	<div id="article"></div>
       	<div id="featuredArticles"></div>
-		<script id="articleTemplate" type="text/template">
-			<div class="col-md-12">
+		    <script id="articleTemplate" type="text/template">
+			<div class="">
 				<div class="col-md-7" style="border-right:thin #cccccc solid">
 					<p id="articleTitle"><%= main.headLine %></p>
 					<% if (main.numberOfImages > 0) { %>
