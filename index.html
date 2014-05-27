@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -34,81 +33,6 @@
 
   <body>
     <div class="base">
-<<<<<<< HEAD
-      <div class="container">
-          <nav class="header top-nav">
-            <ul class="header top-nav">
-              <li class="pull-left"><i class="fa fa-bars"></i> Sections</li>
-              <li class="pull-left"><i class="fa fa-search"></i> Search</li>
-              <li><span class="header top-nav username">joshstickles...</span> <i class="fa fa-cogs"></i></li>
-            </ul>
-          </nav>
-          <hr class="header divider">
-          <p class="header title">CapTech.io News</p>
-          <p class="header date">Monday, June 12 2014</p>
-          <hr class="header divider">
-
-          <nav class="header categories">
-            <ul>
-              <li><a href="#/category/1">World</a></li>
-              <li><a href="#/category/2">Business</a></li>       
-              <li><a href="#/category/3">Opinion</a></li>
-              <li><a href="#/category/4">Sports</a></li>
-              <li><a href="#/category/5">Fashion &amp; Style</a></li>
-              <li><a href="#/category/6">Video</a></li>
-            </ul>
-          </nav>
-          <div class="row">
-              <a class="pull-right" id="banner-button">
-                Click to expand
-                <span id="arrow">
-                  <i class="fa fa-chevron-down"></i>
-                </span>
-              </a>
-            </div>
-          <div class="banner collapse" id="collapsed">
-            <p id="message">
-              Josh Stickles T-Shirts and Temporary Tatoos Now Available in the CapTech Store.
-            </p>
-          </div>
-      </div>
-      <nav class="header top-nav">
-        <ul class="header top-nav">
-          <li class="pull-left"><i class="fa fa-bars"></i> Sections</li>
-          <li class="pull-left"><i class="fa fa-search"></i> Search</li>
-          <li><span class="header top-nav username">joshstickles...</span> <i class="fa fa-cogs"></i></li>
-        </ul>
-      </nav>
-      <hr class="header divider">
-      <p class="header title">CapTech.io News</p>
-      <p class="header date">Monday, June 12 2014</p>
-      <hr class="header divider">
-
-      <nav class="header categories">
-        <ul>
-          <li><a href="#/category/1">World</a></li>
-          <li><a href="#/category/2">Business</a></li>       
-          <li><a href="#/category/3">Opinion</a></li>
-          <li><a href="#/category/4">Sports</a></li>
-          <li><a href="#/category/5">Fashion &amp; Style</a></li>
-          <li><a href="#/category/6">Video</a></li>
-        </ul>
-      </nav>
-      <div class="row">
-          <a class="pull-right" id="banner-button">
-            <span id="arrow">
-              <i class="fa fa-chevron-down"></i>
-            </span>
-          </a>
-        </div>
-      <div class="banner collapse" id="collapsed"></div>
-      <script id="bannerTemplate" type="text/template">
-      	<p class="text-center"><%= message %></p>
-      </script>
-
-    <div class="container">
-
-=======
       <div class="container-fluid">
         <div class="row custom-row">
           <div class="col-md-10 col-md-offset-1">
@@ -143,41 +67,40 @@
               </div>
             <div class="banner collapse" id="collapsed"></div>
             <script id="bannerTemplate" type="text/template">
-            	<p class="text-center"><%= message %></p>
+              <p class="text-center"><%= message %></p>
             </script>
           </div>
         </div>
->>>>>>> bdb8114e6bfb700a032d5928d9244f7652a6dcd7
       <div class="row marketing">
-      	<div id="article"></div>
-      	<div id="featuredArticles"></div>
-		    <script id="articleTemplate" type="text/template">
-			<div class="">
-				<div class="col-md-7" style="border-right:thin #cccccc solid">
-					<p id="articleTitle"><%= main.headLine %></p>
-					<% if (main.numberOfImages > 0) { %>
-						<img src="http://placehold.it/600x350">
-					<% } %>
-					<p id="articleCaption"><%= main.fullStory %></p>
-					<p id="articleContent">
-						<%= main.snippet %>
-					</p>
-					</div>
-					<div class="col-md-5">
-					<p id="relatedTitle"><%= aside.headLine %></p>
-					<p class="relatedContent">
-						<%= aside.fullStory %>
-					</p>
-					<% if (aside.numberOfImages > 0) { %>
-						<img src="http://placehold.it/400x250">
-					<% } %>
-					<p class="relatedContent">
-						<%= aside.snippet %>
-					</p>
-				</div>
-			</div>
-		</script>
-		<script id="featuredArticlesTemplate" type="text/template">
+        <div id="article"></div>
+        <div id="featuredArticles"></div>
+        <script id="articleTemplate" type="text/template">
+      <div class="">
+        <div class="col-md-7" style="border-right:thin #cccccc solid">
+          <p id="articleTitle"><%= main.headLine %></p>
+          <% if (main.numberOfImages > 0) { %>
+            <img src="http://placehold.it/600x350">
+          <% } %>
+          <p id="articleCaption"><%= main.fullStory %></p>
+          <p id="articleContent">
+            <%= main.snippet %>
+          </p>
+          </div>
+          <div class="col-md-5">
+          <p id="relatedTitle"><%= aside.headLine %></p>
+          <p class="relatedContent">
+            <%= aside.fullStory %>
+          </p>
+          <% if (aside.numberOfImages > 0) { %>
+            <img src="http://placehold.it/400x250">
+          <% } %>
+          <p class="relatedContent">
+            <%= aside.snippet %>
+          </p>
+        </div>
+      </div>
+    </script>
+    <script id="featuredArticlesTemplate" type="text/template">
       
           <div class="col-md-12">
             <div class="col-md-12 col-md-offset-1">
@@ -230,7 +153,8 @@
                         <img src="http://placehold.it/170x69" style="width: 100%">
                         <p class="snippet">
                           <span class="location"><%= article.location %></span>
-                              <%= article.fullStory %></p>
+                          <%= article.fullStory %>
+                        </p>
                       </div>
                       <%}%>
                   <% }); %>
