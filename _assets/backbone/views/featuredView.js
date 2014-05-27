@@ -19,6 +19,8 @@ var Featured_Col_View = Backbone.View.extend({
         var text = $('#hack').find('div:nth-child(3)').html();
         text = text.replace('Shares', '<br><br>Shares');
         $('#hack').find('div:nth-child(3)').html(text);
+        var p = 'football';
+        $('#hack').find('div:nth-child(3)').find('p:first').after('<img src="http://placehold.it/170x69" style="width: 100%">');
         
         return this;
     },
