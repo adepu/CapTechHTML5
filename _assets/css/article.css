@@ -143,4 +143,8 @@
 	.base {
 		padding:0px;
 	}
+
+	.custom-row {
+		margin:0px;
+	}
 }
