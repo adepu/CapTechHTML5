@@ -133,6 +133,10 @@
 	and (max-device-width : 480px) {
 	
 	.header.title {
-		font-size: 18px;
+		font-size: 14px;
+	}
+
+	.header.date {
+		font-size: 8px;
 	}
 }
