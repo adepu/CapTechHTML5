@@ -16,11 +16,11 @@ var Featured_Col_View = Backbone.View.extend({
         }, this);
         
         $('#hack').find('div:nth-child(3)').find('br:first').after('<img src="http://placehold.it/170x69" style="width: 100%">');
-        var text = $('#hack').find('div:nth-child(3)').html();
+        /*var text = $('#hack').find('div:nth-child(3)').html();
         text = text.replace('Shares', '<br><br>Shares');
-        $('#hack').find('div:nth-child(3)').html(text);
-        var p = 'football';
-        $('#hack').find('div:nth-child(3)').find('p:first').after('<img src="http://placehold.it/170x69" style="width: 100%">');
+        $('#hack').find('div:nth-child(3)').html(text);*/
+        var text = 'football';
+        $('#hack').find('div:nth-child(3)').find('p:first').after('<img src="http://placehold.it/84x84" style="width: 100%">');
         
         return this;
     },
