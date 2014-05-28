@@ -83,6 +83,7 @@
 
 .location{
   font: bold 10px/15px Arvo;
+  text-transform: uppercase;
 }
 
 .banner{
