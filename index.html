@@ -69,66 +69,35 @@
           </div>
         </div>
       <div class="row marketing">
-
         <div id="article"></div>
         <div id="featuredArticles"></div>
         <script id="articleTemplate" type="text/template">
-      <div class="">
-        <div class="col-md-7" style="border-right:thin #cccccc solid">
-          <p id="articleTitle"><%= main.headLine %></p>
-          <% if (main.numberOfImages > 0) { %>
-            <img src="http://placehold.it/600x350">
-          <% } %>
-          <p id="articleCaption"><%= main.fullStory %></p>
-          <p id="articleContent">
-            <%= main.snippet %>
-          </p>
-          </div>
-          <div class="col-md-5">
-          <p id="relatedTitle"><%= aside.headLine %></p>
-          <p class="relatedContent">
-            <%= aside.fullStory %>
-          </p>
-          <% if (aside.numberOfImages > 0) { %>
-            <img src="http://placehold.it/400x250">
-          <% } %>
-          <p class="relatedContent">
-            <%= aside.snippet %>
-          </p>
+        <div class="col-md-10 col-md-offset-1">
+          <div class="col-md-7" style="border-right:thin #cccccc solid">
+            <p id="articleTitle"><%= main.headLine %></p>
+            <% if (main.numberOfImages > 0) { %>
+              <img src="http://placehold.it/600x350">
+            <% } %>
+            <p id="articleCaption"><%= main.fullStory %></p>
+            <p id="articleContent">
+              <%= main.snippet %>
+            </p>
+            </div>
+            <div class="col-md-5">
+            <p id="relatedTitle"><%= aside.headLine %></p>
+            <p class="relatedContent">
+              <%= aside.fullStory %>
+            </p>
+            <% if (aside.numberOfImages > 0) { %>
+              <img src="http://placehold.it/400x250">
+            <% } %>
+            <p class="relatedContent">
+              <%= aside.snippet %>
+            </p>
         </div>
       </div>
     </script>
     <script id="featuredArticlesTemplate" type="text/template">
-
-      	<div id="article"></div>
-      	<div id="featuredArticles"></div>
-		    <script id="articleTemplate" type="text/template">
-			  <div class="col-md-10 col-md-offset-1">
-  				<div class="col-md-7" style="border-right:thin #cccccc solid">
-  					<p id="articleTitle"><%= main.headLine %></p>
-  					<% if (main.numberOfImages > 0) { %>
-  						<img src="http://placehold.it/600x350">
-  					<% } %>
-  					<p id="articleCaption"><%= main.fullStory %></p>
-  					<p id="articleContent">
-  						<%= main.snippet %>
-  					</p>
-  					</div>
-  					<div class="col-md-5">
-  					<p id="relatedTitle"><%= aside.headLine %></p>
-  					<p class="relatedContent">
-  						<%= aside.fullStory %>
-  					</p>
-  					<% if (aside.numberOfImages > 0) { %>
-  						<img src="http://placehold.it/400x250">
-  					<% } %>
-  					<p class="relatedContent">
-  						<%= aside.snippet %>
-  					</p>
-				</div>
-			</div>
-		</script>
-		<script id="featuredArticlesTemplate" type="text/template">
       
           <div class="col-md-12">
             <div class="col-md-12 col-md-offset-1">
@@ -144,22 +113,29 @@
                   <%}%>
                   <% }); %>
               </div>
-              <div class="col-md-4">
+              <div class="col-md-4" id="anotherHack">
                 <img src="http://placehold.it/371x210" style="width: 100%;padding-bottom:20px;">
                 <% _.each(main, function(article, index) { %> 
                   <%
                   if(index === 0){%>
                     <p id="heading1"><%= article.headLine %></p>
-                  <%}else if(index === 2){%>
-                      <img src="http://placehold.it/84x84" align="right">
-                      <p class="heading2"><%= article.headLine %></p>
-                  <%} else {%>
-                    <p class="heading2"><%= article.headLine %></p>  
-                  <%}%>
-                   <p class="snippet">
+                    <p class="snippet">
                     <span class="location"><%= article.location %></span>
                       <%= article.snippet %></p>
-
+                  <%}else if(index === 2){%>
+                         <p class="heading2">
+                            <%= article.headLine %>
+                         </p>
+                         <p class="snippet">
+                            <span class="location"><%= article.location %></span>
+                              <%= article.snippet %>
+                          </p>
+                  <%} else {%>
+                    <p class="heading2"><%= article.headLine %></p>
+                    <p class="snippet">
+                    <span class="location"><%= article.location %></span>
+                      <%= article.snippet %></p>  
+                  <%}%>
                   <% }); %>
               </div>
             <div class="col-md-4" id="hack">
@@ -180,8 +156,7 @@
                         </p>
                         <p class="snippet">
                           <span class="location"><%= article.location %></span>
-                          <%= article.fullStory %>
-                        </p>
+                              <%= article.fullStory %></p>
                       </div>
                       <%}%>
                   <% }); %>
