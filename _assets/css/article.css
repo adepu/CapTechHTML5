@@ -147,4 +147,8 @@
 	.custom-row {
 		margin:0px;
 	}
+
+	.categories ul li {
+		padding: 5px;
+	}
 }
