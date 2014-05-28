@@ -106,9 +106,9 @@
 		</script>
 		<script id="featuredArticlesTemplate" type="text/template">
       
-          <div class="col-md-12">
-            <div class="col-md-12 col-md-offset-1">
-              <div class="col-md-2 col-xs-12">
+          <div class="col-md-12 col-xs-12">
+            <div class="col-md-12 col-md-offset-1 col-sm-12 col-sm-offset-0">
+              <div class="col-md-2 col-sm-12">
                 <% _.each(aside, function(article, index) { %> 
                   <p class="head"><%= article.headLine %></p>
                   <p class="snippet">
@@ -120,7 +120,7 @@
                   <%}%>
                   <% }); %>
               </div>
-              <div class="col-md-4 col-xs-12">
+              <div class="col-md-4 col-sm-12">
                 <img src="http://placehold.it/371x210" style="width: 100%;padding-bottom:20px;">
                 <% _.each(main, function(article, index) { %> 
                   <%
@@ -138,19 +138,19 @@
 
                   <% }); %>
               </div>
-            <div class="col-md-4 col-xs-12" id="hack">
+            <div class="col-md-4 col-sm-12" id="hack">
               <p id="title">The Opinion Pages</p>
                 <% _.each(opinion, function(article, index) { %>
                   <%
                     if(index === 0){%>
-                      <div class="col-md-6 col-xs-12">
+                      <div class="col-md-6 col-sm-12">
                         <p class="title1"><%= article.headLine %></p>
                         <p class="snippet">
                           <span class="location"><%= article.location %></span>
                               <%= article.fullStory %></p>
                       </div>
                     <%} else {%>
-                      <div class="col-md-6 col-xs-12">
+                      <div class="col-md-6 col-sm-12">
                         <p class="custom title1">
                             <%= article.headLine %>
                         </p>
@@ -165,13 +165,13 @@
                 <% _.each(travel, function(article, index) { %>
                   <%
                     if(index === 0){%>
-                      <div class="col-md-6 col-xs-12">
+                      <div class="col-md-6 col-sm-12">
                         <p class="thead"><%= article.headLine %></p>
                         <img src="http://placehold.it/171x87" style="width: 100%"></p>
                         <img src="http://placehold.it/171x87" style="width: 100%"></p>
                       </div>
                     <%} else {%>
-                      <div class="col-md-6 col-xs-12">
+                      <div class="col-md-6 col-sm-12">
                         <p class="thead"><%= article.headLine %></p>
                         <img src="http://placehold.it/169x36" style="width: 100%"></p>
                         <p class="snippet">
