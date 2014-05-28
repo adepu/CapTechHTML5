@@ -7,51 +7,57 @@ var Category_View = Backbone.View.extend({
         this.collection.fetch({
             success: function(response) {
                 self.render();
-                var cat1 = document.getElementById("world");
-                var cat2 = document.getElementById("business");
-                var cat3 = document.getElementById("sports");
-                var cat4 = document.getElementById("fashion");
-                var cat5 = document.getElementById("video");
-                var cat6 = document.getElementById("opinion");
-                var cat7 = document.getElementById("travel");
+                var cat1 = $(".world");
+                var cat2 = $(".business");
+                var cat3 = $(".sports");
+                var cat4 = $(".fashion");
+                var cat5 = $(".video");
+                var cat6 = $(".opinion");
+                var cat7 = $(".travel");
 
-                cat1.onclick = function() {
+                cat1.click(function(e){
                     clearCategories();
-                    cat1.style.fontWeight="bold";
-                };
-                cat2.onclick = function() { 
+                    cat1.css('font-weight',"bold");
+                });
+                
+                cat2.click(function(e){
                     clearCategories();
-                    cat2.style.fontWeight="bold";
-                };
-                cat3.onclick = function() {
+                    cat2.css('font-weight',"bold");
+                });
+
+                cat3.click(function(e){
                     clearCategories();
-                    cat3.style.fontWeight="bold";
-                };
-                cat4.onclick = function() {
+                    cat3.css('font-weight',"bold");
+                });
+
+                cat4.click(function(e){
                     clearCategories();
-                    cat4.style.fontWeight="bold";
-                };
-                cat5.onclick = function() {
+                    cat4.css('font-weight',"bold");
+                });
+
+                cat5.click(function(e){
                     clearCategories();
-                    cat5.style.fontWeight="bold";
-                };
-                cat6.onclick = function() {
+                    cat5.css('font-weight',"bold");
+                });
+
+                cat6.click(function(e){
                     clearCategories();
-                    cat6.style.fontWeight="bold";
-                };
-                cat7.onclick = function() {
+                    cat6.css('font-weight',"bold");
+                });
+
+                cat7.click(function(e){
                     clearCategories();
-                    cat7.style.fontWeight="bold";
-                };
+                    cat7.css('font-weight',"bold");
+                });
 
                 function clearCategories() {
-                    cat1.style.fontWeight="normal";
-                    cat2.style.fontWeight="normal";
-                    cat3.style.fontWeight="normal";
-                    cat4.style.fontWeight="normal";
-                    cat5.style.fontWeight="normal";
-                    cat6.style.fontWeight="normal";
-                    cat7.style.fontWeight="normal";
+                    cat1.css('font-weight',"normal");
+                    cat2.css('font-weight',"normal");
+                    cat3.css('font-weight',"normal");
+                    cat4.css('font-weight',"normal");
+                    cat5.css('font-weight',"normal");
+                    cat6.css('font-weight',"normal");
+                    cat7.css('font-weight',"normal");
                 }
            }
         });

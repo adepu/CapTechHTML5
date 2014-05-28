@@ -17,6 +17,8 @@
 .header.divider
 {
 	border-top: 2px solid #D3D3D3;
+	border-bottom: 2px solid #D3D3D3;
+	padding: 10px;
 	margin: 15px;
 	margin-right: 0px;
 	margin-left:0px;
@@ -92,8 +94,10 @@
 }
 .header.categories a
 {
-	color: black;
+	color: black !important;
 	text-decoration: none;
+	padding: 0 !important;
+	background-color: white;
 }
 .header.categories ul li
 {

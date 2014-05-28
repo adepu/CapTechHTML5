@@ -41,19 +41,25 @@
               <ul class="header">
                 <li class="pull-left"><i class="fa fa-bars"></i> Sections</li>
                 <li class="pull-left"><i class="fa fa-search"></i> Search</li>
-                <li><span class="header top-nav username">joshstickles...</span> <i class="fa fa-cogs"></i></li>
+                <li class="pull-right"><span class="header top-nav username">joshstickles...</span> <i class="fa fa-cogs"></i></li>
               </ul>
             </nav>
-            <hr class="header divider">
-            <p class="header title"><a href="./" style="text-decoration:none;color:black">CapTech.io News</a></p>
-            <p class="header date">Monday, June 12 2014</p>
-            <hr class="header divider">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="header divider">
+                  <span class="header title text-center"><a href="./" style="text-decoration:none;color:black">CapTech.io News</a></span>
+                  <p class="header date">Monday, June 12 2014</p>
+                </div>
+              </div>
+            </div>
 
             <nav class="header categories">
               <ul id="categories">
               </ul>
               <script id="categoryTemplate" type="text/template">
-                <li><a id=<%= shortName %> href=<%="#/category/" + id %>><%= displayName %></a></li>
+                <li class="col-sm-12 col-xs-12 hidden-md hidden-lg"><a class=<%= shortName %> href=<%="#/category/" + id %>><%= displayName %></a></li>
+               
+                <li class="hidden-sm hidden-xs"><a class=<%= shortName %> href=<%="#/category/" + id %>><%= displayName %></a></li>
               </script>
             </nav>
             <div class="row">
@@ -63,7 +69,7 @@
                   </span>
                 </a>
               </div>
-            <div class="banner collapse" id="collapsed"></div>
+            <div class="banner collapse hidden-xs hidden-sm" id="collapsed"></div>
             <script id="bannerTemplate" type="text/template">
             	<p class="text-center"><%= message %></p>
             </script>
@@ -77,7 +83,7 @@
   				<div class="col-md-7" style="border-right:thin #cccccc solid">
   					<p id="articleTitle"><%= main.headLine %></p>
   					<% if (main.numberOfImages > 0) { %>
-  						<img src="http://placehold.it/600x350">
+  						<img class="col-md-12 col-sm-8 col-xs-8" src="http://placehold.it/600x350">
   					<% } %>
   					<p id="articleCaption"><%= main.fullStory %></p>
   					<p id="articleContent">
@@ -90,7 +96,7 @@
   						<%= aside.fullStory %>
   					</p>
   					<% if (aside.numberOfImages > 0) { %>
-  						<img src="http://placehold.it/400x250">
+  						<img class="col-md-12 col-sm-12 col-xs-12" src="http://placehold.it/400x250">
   					<% } %>
   					<p class="relatedContent">
   						<%= aside.snippet %>
