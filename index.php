@@ -68,10 +68,10 @@
           </header>
         </div>
       <div class="row marketing">
-      	<article id="article"></article>
-      	<article id="featuredArticles"></article>
-		    
-		
+        <article id="article"></article>
+        <article id="featuredArticles"></article>
+        
+    
       </div>
       <footer class="footer">
         <p>CapTech 2014 Interns</p>
@@ -79,45 +79,12 @@
       </footer>
 
     </div> <!-- /container -->
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    
-    <!-- Latest compiled and minified JavaScript -->
-    
-    <!-- Java Script Libraries -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-    <script src="http://documentcloud.github.com/underscore/underscore-min.js"></script>
-    <script src="http://documentcloud.github.com/backbone/backbone-min.js"></script>
-    
-    <!-- CSS Bootstrap -->
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-    
-    <!-- Models -->
-    <script type="text/javascript" src="./_assets/backbone/models/article.js"></script>
-    <script type="text/javascript" src="./_assets/backbone/models/category.js"></script>
-    <script type="text/javascript" src="./_assets/backbone/models/advertisement.js"></script>
-    
-    <!-- Collections -->
-    <script type="text/javascript" src="./_assets/backbone/collections/singleArticle.js"></script>
-    <script type="text/javascript" src="./_assets/backbone/collections/featuredArticle.js"></script>
-    <script type="text/javascript" src="./_assets/backbone/collections/categories.js"></script>
-    <script type="text/javascript" src="./_assets/backbone/collections/bannerAd.js"></script>
-    
-    <!-- Views -->
-    <script type="text/javascript" src="./_assets/backbone/views/articleView.js"></script>
-    <script type="text/javascript" src="./_assets/backbone/views/featuredView.js"></script>
-    <script type="text/javascript" src="./_assets/backbone/views/categoryView.js"></script>
-    <script type="text/javascript" src="./_assets/backbone/views/bannerView.js"></script>
-    
-    <!-- Routers -->
-    <script type="text/javascript" src="./_assets/backbone/routers/articleRouter.js"></script>
-
+    <!-- TEMPLATES -->
+    <section>
     <script id="bannerTemplate" type="text/template">
-    <p class="text-center"><%= message %></p>
+      <p class="text-center"><%= message %></p>
     </script>
+
     <script id="articleTemplate" type="text/template">
     <div class="col-md-10 col-md-offset-1">
     <div class="col-md-7" style="border-right:thin #cccccc solid">
@@ -193,21 +160,21 @@
                 <% _.each(opinion, function(article, index) { %>
                   <%
                     if(index === 0){%>
-                      <section class="col-md-6 col-sm-12">
+                      <article class="col-md-6 col-sm-12">
                         <p class="title1"><%= article.headLine %></p>
                         <p class="snippet">
                           <span class="location"><%= article.location %></span>
                               <%= article.fullStory %></p>
-                      </section>
+                      </article>
                     <%} else {%>
-                      <section class="col-md-6 col-sm-12">
+                      <article class="col-md-6 col-sm-12">
                         <p class="custom title1">
                             <%= article.headLine %>
                         </p>
                         <p class="snippet">
                           <span class="location"><%= article.location %></span>
                               <%= article.fullStory %></p>
-                      </section>
+                      </article>
                       <%}%>
                   <% }); %>
               <p id="travelhead">TRAVEL<font class="hidden-xs" color="#cccccc">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -215,26 +182,62 @@
                 <% _.each(travel, function(article, index) { %>
                   <%
                     if(index === 0){%>
-                      <section class="col-md-6 col-sm-12">
+                      <article class="col-md-6 col-sm-12">
                         <p class="thead"><%= article.headLine %></p>
                         <img src="http://placehold.it/171x87" style="width: 100%"></p>
                         <img src="http://placehold.it/171x87" style="width: 100%"></p>
-                      </section>
+                      </article>
                     <%} else {%>
-                      <section class="col-md-6 col-sm-12">
+                      <article class="col-md-6 col-sm-12">
                         <p class="thead"><%= article.headLine %></p>
                         <img src="http://placehold.it/169x36" style="width: 100%"></p>
                         <p class="snippet">
                           <span class="location"><%= article.location %></span>
                               <%= article.snippet %></p>
-                      </section>
+                      </article>
                       <%}%>
                   <% }); %>
                 </div>
               </div>
         
         </script>
+      </section>
     
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    
+    <!-- Latest compiled and minified JavaScript -->
+    
+    <!-- Java Script Libraries -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="http://documentcloud.github.com/underscore/underscore-min.js"></script>
+    <script src="http://documentcloud.github.com/backbone/backbone-min.js"></script>
+    
+    <!-- CSS Bootstrap -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    
+    <!-- Models -->
+    <script type="text/javascript" src="./_assets/backbone/models/article.js"></script>
+    <script type="text/javascript" src="./_assets/backbone/models/category.js"></script>
+    <script type="text/javascript" src="./_assets/backbone/models/advertisement.js"></script>
+    
+    <!-- Collections -->
+    <script type="text/javascript" src="./_assets/backbone/collections/singleArticle.js"></script>
+    <script type="text/javascript" src="./_assets/backbone/collections/featuredArticle.js"></script>
+    <script type="text/javascript" src="./_assets/backbone/collections/categories.js"></script>
+    <script type="text/javascript" src="./_assets/backbone/collections/bannerAd.js"></script>
+    
+    <!-- Views -->
+    <script type="text/javascript" src="./_assets/backbone/views/articleView.js"></script>
+    <script type="text/javascript" src="./_assets/backbone/views/featuredView.js"></script>
+    <script type="text/javascript" src="./_assets/backbone/views/categoryView.js"></script>
+    <script type="text/javascript" src="./_assets/backbone/views/bannerView.js"></script>
+    
+    <!-- Routers -->
+    <script type="text/javascript" src="./_assets/backbone/routers/articleRouter.js"></script>
+
     <script>
       $(document).ready(function(){
         $('#banner-button').on('click', function(event){
