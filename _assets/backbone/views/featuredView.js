@@ -7,6 +7,7 @@ var Featured_Col_View = Backbone.View.extend({
     template: _.template($('#featuredArticlesTemplate').html()),
     initialize: function(){
         var self = this;
+        $('#article').empty();
         this.collection.fetch({
             success: function(response) {
                 self.render();
