@@ -1,3 +1,6 @@
+/**
+* This Backbone Collection contains a single article
+*/
 var Single_Article = Backbone.Collection.extend({
 	model: Article,
 	initialize: function(models, options) {

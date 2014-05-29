@@ -1,3 +1,7 @@
+/**
+* This Backbone Router handles the routes for when a category is clicked
+* and needs to pull a new article view, hence in the show function below
+*/
 var Article_Router = Backbone.Router.extend({
   routes: {
       'category/:id': 'show',
