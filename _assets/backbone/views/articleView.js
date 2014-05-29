@@ -1,3 +1,7 @@
+/** 
+* This Backbone View initializes and renders a specific article
+* when a category is clicked and hides the banner
+*/
 var Article_View = Backbone.View.extend({
     el: "#article",
     template: _.template($('#articleTemplate').html()),

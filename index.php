@@ -68,10 +68,10 @@
           </header>
         </div>
       <div class="row marketing">
-      	<article id="article"></article>
-      	<article id="featuredArticles"></article>
-		    
-		
+        <article id="article"></article>
+        <article id="featuredArticles"></article>
+        
+    
       </div>
       <footer class="footer">
         <p>CapTech 2014 Interns</p>
@@ -130,7 +130,7 @@
                   <%}%>
                   <% }); %>
               </div>
-              <div class="col-md-4 col-sm-12">
+              <div class="col-md-4 col-sm-12" id="anotherHack">
                 <img src="http://placehold.it/371x210" style="width: 100%;padding-bottom:20px;">
                 <% _.each(main, function(article, index) { %> 
                   <%
@@ -140,12 +140,12 @@
                     <span class="location"><%= article.location %></span>
                       <%= article.snippet %></p>
                   <%}else if(index === 2){%>
-                          <img src="http://placehold.it/84x84" class="pull-right" style="margin-right: -30px">
-                         <p class="heading2"><%= article.headLine %></p>
-
+                         <p class="heading2">
+                            <%= article.headLine %>
+                         </p>
                          <p class="snippet">
                             <span class="location"><%= article.location %></span>
-                            <%= article.snippet %>
+                              <%= article.snippet %>
                           </p>
                   <%} else {%>
                     <p class="heading2"><%= article.headLine %></p>
