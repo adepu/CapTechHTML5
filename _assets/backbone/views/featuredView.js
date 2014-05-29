@@ -1,3 +1,7 @@
+/**
+* This Backbone View fetches the featured articles json and renders
+* them in columns
+*/
 var Featured_Col_View = Backbone.View.extend({
     el: "#featuredArticles",
     template: _.template($('#featuredArticlesTemplate').html()),
