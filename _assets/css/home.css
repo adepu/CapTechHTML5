@@ -5,10 +5,10 @@
   font-weight: bold;
 }
 
-#featuredArticles.col-md-12{
-  padding-left: 6px;
-  padding-right: 5px;
+.textbottom{
+  vertical-align: text-bottom;
 }
+
 
 .banner
 {
@@ -51,52 +51,57 @@
 }
 .head {
 
-	font: bold italic 18px Arvo;
+  font: bold italic 18px Arvo;
 }
 #heading1{
+<<<<<<< HEAD
+  font: italic 16px/20px Arvo;
+=======
 	font: italic 16px/20px Arvo;
   margin-bottom: 0px;
+>>>>>>> 4f5264e0381631d4597df1acedee5b27d00dd2c6
 }
 .heading2{
-	font: bold italic 16px/20px Arvo;
+  font: bold italic 16px/20px Arvo;
 }
 .snippet{
-	font: 10px/15px Arvo;
+  font: 10px/15px Arvo;
 }
 #title{
-	font: italic 16px Arvo;
-	text-align: center;
+  font: italic 16px Arvo;
+  text-align: center;
 }
 .title1{
-	font: italic 12px/15px Arvo;
-	text-transform: uppercase;
+  font: italic 12px/15px Arvo;
+  text-transform: uppercase;
 }
 #travelhead{
-	font: bold 12px Arvo;
+  font: bold 12px Arvo;
 }
 #travelhead img{
   width: inherit;
 }
 .thead{
-	font: bold 12px/15px Arvo;
+  font: bold 12px/15px Arvo;
 }
 
 .location{
   font: bold 10px/15px Arvo;
+  text-transform: uppercase;
 }
 
 .banner{
-	background-color: #cccccc;
+  background-color: #cccccc;
 }
 
 #bannerTop{
-	font: 12px Arvo;
-	color:#ffffff;
-	text-align: right;
+  font: 12px Arvo;
+  color:#ffffff;
+  text-align: right;
 }
 #bannerMid{
-	font: bold italic 18px Arvo;
-	text-align: center;
+  font: bold italic 18px Arvo;
+  text-align: center;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -143,4 +148,3 @@
 .custom-row {
   margin: 15px;
 }
-
