@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- <link rel="shortcut icon" href="../../assets/ico/favicon.ico"> -->
@@ -35,26 +35,33 @@
     <div class="base">
       <div class="container-fluid">
         <div class="row custom-row">
-          <section class="col-md-10 col-md-offset-1">
-            <nav class="header top-nav">
+
+          <section class="col-md-10 col-sm-12 col-xs-12 col-md-offset-1 col-sm-offset-0 col-xs-offset-0">
+            <nav class="header top-nav hidden-xs">
+
               <ul class="header">
                 <li class="pull-left"><i class="fa fa-bars"></i> Sections</li>
                 <li class="pull-left"><i class="fa fa-search"></i> Search</li>
-                <li><span class="header top-nav username">joshstickles...</span> <i class="fa fa-cogs"></i></li>
+                <li class="pull-right"><span class="header top-nav username">joshstickles...</span> <i class="fa fa-cogs"></i></li>
               </ul>
             </nav>
-            <hr class="header divider">
-            <p class="header title"><a href="./" style="text-decoration:none;color:black">CapTech.io News</a></p>
-            <p class="header date">Monday, June 12 2014</p>
-            <hr class="header divider">
+            <div class="row">
+              <div class="col-xs-12 header divider">
+                <div class="">
+                  <span class="header title text-center"><a href="./index.html" style="text-decoration:none;color:black">CapTech.io News</a></span>
+                  <p class="header date">Monday, June 12 2014</p>
+                </div>
+              </div>
+           
 
-            <nav class="header categories">
-              <ul id="categories">
-              </ul>
-              <script id="categoryTemplate" type="text/template">
-                <li><a id=<%= shortName %> href=<%="#/category/" + id %>><%= displayName %></a></li>
-              </script>
-            </nav>
+              <nav class="header categories">
+                <ul id="categories"></ul>
+                <script id="categoryTemplate" type="text/template">
+                  <li class="col-sm-12 col-xs-12 hidden-md hidden-lg"><a class=<%= shortName %> href=<%="#/category/" + id %>><%= displayName %></a></li>
+                  <li class="hidden-sm hidden-xs"><a class=<%= shortName %> href=<%="#/category/" + id %>><%= displayName %></a></li>
+                </script>
+              </nav>
+            </div>
             <div class="row">
                 <a class="pull-right" id="banner-button">
                   <span id="arrow">
@@ -62,46 +69,45 @@
                   </span>
                 </a>
               </div>
-            <div class="banner collapse" id="collapsed"></div>
+            <div class="banner collapse hidden-xs hidden-sm" id="collapsed"></div>
             <script id="bannerTemplate" type="text/template">
               <p class="text-center"><%= message %></p>
             </script>
           </section>
         </div>
       <div class="row marketing">
-        <div id="article"></div>
-        <div id="featuredArticles"></div>
-        <script id="articleTemplate" type="text/template">
-        <div class="col-md-10 col-md-offset-1">
-          <div class="col-md-7" style="border-right:thin #cccccc solid">
-            <p id="articleTitle"><%= main.headLine %></p>
-            <% if (main.numberOfImages > 0) { %>
-              <img src="http://placehold.it/600x350">
-            <% } %>
-            <p id="articleCaption"><%= main.fullStory %></p>
-            <p id="articleContent">
-              <%= main.snippet %>
-            </p>
-            </div>
-            <div class="col-md-5">
-            <p id="relatedTitle"><%= aside.headLine %></p>
-            <p class="relatedContent">
-              <%= aside.fullStory %>
-            </p>
-            <% if (aside.numberOfImages > 0) { %>
-              <img src="http://placehold.it/400x250">
-            <% } %>
-            <p class="relatedContent">
-              <%= aside.snippet %>
-            </p>
-        </div>
-      </div>
-    </script>
-    <script id="featuredArticlesTemplate" type="text/template">
-      
-          <div class="col-md-12">
-            <div class="col-md-12 col-md-offset-1">
-              <div class="col-md-2">
+      	<div id="article"></div>
+      	<div id="featuredArticles"></div>
+		    <script id="articleTemplate" type="text/template">
+			  <div class="col-md-10 col-md-offset-1">
+  				<div class="col-md-7" style="border-right:thin #cccccc solid">
+  					<p id="articleTitle"><%= main.headLine %></p>
+  					<% if (main.numberOfImages > 0) { %>
+  						<img class="col-md-12 col-sm-8 col-xs-8" src="http://placehold.it/600x350">
+  					<% } %>
+  					<p id="articleCaption"><%= main.fullStory %></p>
+  					<p id="articleContent">
+  						<%= main.snippet %>
+  					</p>
+  					</div>
+  					<div class="col-md-5">
+  					<p id="relatedTitle"><%= aside.headLine %></p>
+  					<p class="relatedContent">
+  						<%= aside.fullStory %>
+  					</p>
+  					<% if (aside.numberOfImages > 0) { %>
+  						<img class="col-md-12 col-sm-12 col-xs-12" src="http://placehold.it/400x250">
+  					<% } %>
+  					<p class="relatedContent">
+  						<%= aside.snippet %>
+  					</p>
+				</div>
+			</div>
+		</script>
+		<script id="featuredArticlesTemplate" type="text/template">
+          <div class="col-md-12 col-xs-12">
+            <div class="col-md-12 col-md-offset-1 col-sm-12 col-sm-offset-0">
+              <div class="col-md-2 col-sm-12">
                 <% _.each(aside, function(article, index) { %> 
                   <p class="head"><%= article.headLine %></p>
                   <p class="snippet">
@@ -113,7 +119,7 @@
                   <%}%>
                   <% }); %>
               </div>
-              <div class="col-md-4" id="anotherHack">
+              <div class="col-md-4 col-sm-12" id="anotherHack">
                 <img src="http://placehold.it/371x210" style="width: 100%;padding-bottom:20px;">
                 <% _.each(main, function(article, index) { %> 
                   <%
@@ -138,19 +144,19 @@
                   <%}%>
                   <% }); %>
               </div>
-            <div class="col-md-4" id="hack">
+            <div class="col-md-4 col-sm-12" id="hack">
               <p id="title">The Opinion Pages</p>
                 <% _.each(opinion, function(article, index) { %>
                   <%
                     if(index === 0){%>
-                      <div class="col-md-6">
+                      <div class="col-md-6 col-sm-12">
                         <p class="title1"><%= article.headLine %></p>
                         <p class="snippet">
                           <span class="location"><%= article.location %></span>
                               <%= article.fullStory %></p>
                       </div>
                     <%} else {%>
-                      <div class="col-md-6">
+                      <div class="col-md-6 col-sm-12">
                         <p class="custom title1">
                             <%= article.headLine %>
                         </p>
@@ -160,18 +166,18 @@
                       </div>
                       <%}%>
                   <% }); %>
-              <p id="travelhead">TRAVEL<font color="#cccccc">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+              <p id="travelhead">TRAVEL<font class="hidden-xs" color="#cccccc">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
               </font></p>
                 <% _.each(travel, function(article, index) { %>
                   <%
                     if(index === 0){%>
-                      <div class="col-md-6">
+                      <div class="col-md-6 col-sm-12">
                         <p class="thead"><%= article.headLine %></p>
                         <img src="http://placehold.it/171x87" style="width: 100%"></p>
                         <img src="http://placehold.it/171x87" style="width: 100%"></p>
                       </div>
                     <%} else {%>
-                      <div class="col-md-6">
+                      <div class="col-md-6 col-sm-12">
                         <p class="thead"><%= article.headLine %></p>
                         <img src="http://placehold.it/169x36" style="width: 100%"></p>
                         <p class="snippet">
@@ -185,7 +191,6 @@
         
         </script>
       </div>
-
       <div class="footer">
         <p>CapTech 2014 Interns</p>
       </div>
